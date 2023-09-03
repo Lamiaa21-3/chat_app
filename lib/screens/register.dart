@@ -1,12 +1,13 @@
 import 'package:chat_app/componantes/custom_button.dart';
 import 'package:chat_app/componantes/custom_text_field.dart';
-import 'package:chat_app/constants.dart';
-import 'package:chat_app/screens/register.dart';
+import 'package:chat_app/screens/login.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class LogIn extends StatelessWidget {
-  const LogIn({Key? key}) : super(key: key);
+import '../constants.dart';
+
+class Register extends StatelessWidget {
+  const Register({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -37,7 +38,7 @@ class LogIn extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Text(
-                  ' LOGIN ',
+                  ' Register ',
                   style: TextStyle(
                     fontSize: 20,
                   ),
@@ -55,7 +56,9 @@ class LogIn extends StatelessWidget {
             SizedBox(
               height: 20,
             ),
-            CustomBuuton(text: ' Login ',),
+            CustomBuuton(
+              text: ' Register ',
+            ),
             SizedBox(
               height: 10,
             ),
@@ -63,18 +66,18 @@ class LogIn extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Dont have email ?  ",
+                  "Aleardy you have account  ",
                   style: TextStyle(color: Colors.white),
                 ),
                 GestureDetector(
-                  onTap: () {
+                  onTap: ()
+                  {
                     Navigator.pushNamed(
-                      context,'Register'
+                        context,'LogIn'
                     );
-
                   },
                   child: Text(
-                    "    Register ",
+                    "    Login  ",
                     style: TextStyle(color: Colors.white),
                   ),
                 ),
